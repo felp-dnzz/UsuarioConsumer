@@ -1,7 +1,6 @@
-package service;
+package org.example.usuarioconsumer.service;
 
-import model.Usuario;
-import model.UsuarioInfo;
+import org.example.usuarioconsumer.model.UsuarioInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpMethod;
 import org.springframework.stereotype.Service;

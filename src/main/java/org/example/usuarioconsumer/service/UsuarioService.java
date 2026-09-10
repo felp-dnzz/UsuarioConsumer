@@ -1,6 +1,7 @@
-package service;
+package org.example.usuarioconsumer.service;
 
-import model.Usuario;
+
+import org.example.usuarioconsumer.model.Usuario;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpMethod;
 import org.springframework.stereotype.Service;
@@ -31,8 +32,9 @@ public class UsuarioService {
                 retrieve().
                 bodyToFlux(Usuario.class).collectList();
         return monoListUsuario.block();
-    }
 
+
+    }
     public Usuario save(Usuario usuario) {
         Mono<Usuario> monoUsuario = this.webClient.method(HttpMethod.POST).
                 uri(uri).
@@ -47,4 +49,5 @@ public class UsuarioService {
                 uri(uri + "/" + id).retrieve().bodyToMono(Void.class);
         return monoVoid.block();
     }
+
 }

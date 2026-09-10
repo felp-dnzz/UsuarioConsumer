@@ -33,7 +33,7 @@ public class UsuarioInfoService {
         return monoListUsuarioInfo.block();
     }
 
-    public UsuarioInfo save(Usuario usuarioinfo) {
+    public UsuarioInfo save(UsuarioInfo usuarioinfo) {
         Mono<UsuarioInfo> monoUsuarioInfo = this.webClient.method(HttpMethod.POST).
                 uri(uri).
                 body(BodyInserters.fromValue(usuarioinfo)).

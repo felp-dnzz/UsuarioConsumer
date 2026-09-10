@@ -18,10 +18,10 @@
 </head>
 <body>
 <a th:href="@{/usuarioinfo}"><i data-lucide="arrow-left"></i>Back</a>
-<form th:object="${usuarioinfo}" th:action="@{/usuarioinfo/save}" method="POST">
+<form th:object="${usuarioInfo}" th:action="@{/usuarioinfo/save}" method="POST">
     <input150>
         <label>Usuario_ID:</label>
-        <input type="text" th:field="*{usuario_id}" readonly>
+        <input type="text" th:field="*{usuarioid}" readonly>
     </input150>
     <input150>
         <label>Nome:</label>

@@ -3,26 +3,26 @@ package org.example.usuarioconsumer.model;
 import java.time.LocalDate;
 
 public class UsuarioInfo {
-    private Integer usuarioid;
+    private Integer usuarioId;
     private String nome;
     private String email;
-    private LocalDate datanascimento;
+    private LocalDate dataNascimento;
 
     public UsuarioInfo(){}
 
-    public UsuarioInfo(Integer usuarioid, String nome, String email, LocalDate datanascimento){
-        this.setUsuarioid(usuarioid);
-        this.setNome(nome);
-        this.setEmail(email);
-        this.setDatanascimento(datanascimento);
+    public UsuarioInfo(Integer usuarioId, String nome, String email, LocalDate dataNascimento){
+        this.usuarioId(usuarioId);
+        this.nome(nome);
+        this.email(email);
+        this.dataNascimento(dataNascimento);
     }
 
     public Integer getUsuarioid() {
-        return usuarioid;
+        return usuarioId;
     }
 
-    public void setUsuarioid(Integer usuarioid) {
-        this.usuarioid = usuarioid;
+    public void setUsuarioId(Integer usuarioId) {
+        this.usuarioId = usuarioId;
     }
 
     public String getNome() {
@@ -41,11 +41,11 @@ public class UsuarioInfo {
         this.email = email;
     }
 
-    public LocalDate getDatanascimento() {
-        return datanascimento;
+    public LocalDate getDataNascimento() {
+        return dataNascimento;
     }
 
-    public void setDatanascimento(LocalDate datanascimento) {
-        this.datanascimento = datanascimento;
+    public void setDataNascimento(LocalDate dataNascimento) {
+        this.dataNascimento = dataNascimento;
     }
 }

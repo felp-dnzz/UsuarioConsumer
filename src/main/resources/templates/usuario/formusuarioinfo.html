@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.8, shrink-to-fit=no">
+    <title>Form - Usuario</title>
+    <link rel="stylesheet" href="/button.css">
+    <link rel="stylesheet" href="/color.css">
+    <link rel="stylesheet" href="/font.css">
+    <link rel="stylesheet" href="/input.css">
+    <link rel="stylesheet" href="/table.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            lucide.createIcons();
+        })
+    </script>
+</head>
+<body>
+<a th:href="@{/usuarioinfo}"><i data-lucide="arrow-left"></i>Back</a>
+<form th:object="${usuarioinfo}" th:action="@{/usuarioinfo/save}" method="POST">
+    <input150>
+        <label>Usuario_ID:</label>
+        <input type="text" th:field="*{usuario_id}" readonly>
+    </input150>
+    <input150>
+        <label>Nome:</label>
+        <input type="text" th:field="*{nome}">
+    </input150>
+    <input150>
+        <label>Email:</label>
+        <input type="text" th:field="*{email}">
+    </input150>
+    <input150>
+        <label>DataNascimento:</label>
+        <input type="date" th:field="*{datanascimento}">
+    </input150>
+    <button type="submit"><i data-lucide="save"></i>Save usuarioinfo</button>
+</form>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.8, shrink-to-fit=no">
+    <title>List - Person</title>
+    <link rel="stylesheet" href="/button.css">
+    <link rel="stylesheet" href="/color.css">
+    <link rel="stylesheet" href="/font.css">
+    <link rel="stylesheet" href="/table.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            lucide.createIcons();
+        })
+    </script>
+</head>
+<body>
+<a th:href="@{/usuarioinfo/new}"><i data-lucide="user-round-plus"></i>New UsuarioInfo</a>
+<table>
+    <thead>
+    <tr>
+        <th>Usuario_ID</th>
+        <th>Nome</th>
+        <th>Email</th>
+        <th>DataNascimento</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr th:each="usuarioinfo : ${listUsuarioInfo}">
+        <td th:text="${usuarioinfo.usuario_id}"/>
+        <td th:text="${usuarioinfo.nome}"/>
+        <td th:text="${usuarioinfo.email}"/>
+        <td th:date="${usuarioinfo.datanascimento}"/>
+        <td>
+            <a th:href="@{'/usuarioinfo/' + ${usuarioinfo.id} + '/edit'}"><i data-lucide="user-round-pen"></i>Edit UsuarioInfo</a>
+            <a th:href="@{'/usuarioinfo/' + ${usuarioinfo.id} + '/delete'}"><i data-lucide="user-round-x"></i>Delete UsuarioInfo</a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+
+</body>
+</html>

@@ -28,7 +28,7 @@ public class UsuarioInfoController {
     @GetMapping("/{id}/edit")
     public String editUsuarioInfoString(@PathVariable("id") Integer id, Model model) {
         model.addAttribute("usuarioInfo", usuarioInfoService.findById(id));
-        return "usuarioInfo/form";
+        return "usuarioinfo/form";
     }
 
     @PostMapping("/save")

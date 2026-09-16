@@ -11,10 +11,10 @@ public class UsuarioInfo {
     public UsuarioInfo(){}
 
     public UsuarioInfo(Integer usuarioId, String nome, String email, LocalDate dataNascimento){
-        this.usuarioId(usuarioId);
-        this.nome(nome);
-        this.email(email);
-        this.dataNascimento(dataNascimento);
+        this.setUsuarioId(usuarioId);
+        this.setNome(nome);
+        this.setEmail(email);
+        this.setDataNascimento(dataNascimento);
     }
 
     public Integer getUsuarioid() {

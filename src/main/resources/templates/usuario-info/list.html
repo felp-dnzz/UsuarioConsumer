@@ -16,7 +16,7 @@
     </script>
 </head>
 <body>
-<a th:href="@{/usuarioinfo/new}"><i data-lucide="user-round-plus"></i>New UsuarioInfo</a>
+<a th:href="@{/usuario/info/new}"><i data-lucide="user-round-plus"></i>New UsuarioInfo</a>
 <table>
     <thead>
     <tr>
@@ -24,18 +24,19 @@
         <th>Nome</th>
         <th>Email</th>
         <th>DataNascimento</th>
+        <th>Ações</th>
     </tr>
     </thead>
 
     <tbody>
-    <tr th:each="usuarioinfo : ${listUsuarioInfo}">
-        <td th:text="${usuarioinfo.usuario_id}"/>
-        <td th:text="${usuarioinfo.nome}"/>
-        <td th:text="${usuarioinfo.email}"/>
-        <td th:date="${usuarioinfo.datanascimento}"/>
+    <tr th:each="usuarioInfo : ${listUsuarioInfo}">
+        <td th:text="${usuarioInfo.usuarioId}"/>
+        <td th:text="${usuarioInfo.nome}"/>
+        <td th:text="${usuarioInfo.email}"/>
+        <td th:text="${usuarioInfo.dataNascimento}"/>
         <td>
-            <a th:href="@{'/usuarioinfo/' + ${usuarioinfo.id} + '/edit'}"><i data-lucide="user-round-pen"></i>Edit UsuarioInfo</a>
-            <a th:href="@{'/usuarioinfo/' + ${usuarioinfo.id} + '/delete'}"><i data-lucide="user-round-x"></i>Delete UsuarioInfo</a>
+            <a th:href="@{'/usuario/info/' + ${usuarioInfo.usuarioId} + '/edit'}"><i data-lucide="user-round-pen"></i>Edit UsuarioInfo</a>
+            <a th:href="@{'/usuario/info/' + ${usuarioInfo.usuarioId} + '/delete'}"><i data-lucide="user-round-x"></i>Delete UsuarioInfo</a>
         </td>
     </tr>
     </tbody>

@@ -17,11 +17,11 @@
     </script>
 </head>
 <body>
-<a th:href="@{/usuarioinfo}"><i data-lucide="arrow-left"></i>Back</a>
-<form th:object="${usuarioInfo}" th:action="@{/usuarioinfo/save}" method="POST">
+<a th:href="@{/usuario/info}"><i data-lucide="arrow-left"></i>Back</a>
+<form th:object="${usuarioInfo}" th:action="@{/usuario/info/save}" method="POST">
     <input150>
         <label>Usuario_ID:</label>
-        <input type="text" th:field="*{usuarioid}" readonly>
+        <input type="text" th:field="*{usuarioId}">
     </input150>
     <input150>
         <label>Nome:</label>
@@ -33,7 +33,7 @@
     </input150>
     <input150>
         <label>DataNascimento:</label>
-        <input type="date" th:field="*{datanascimento}">
+        <input type="date" th:field="*{dataNascimento}">
     </input150>
     <button type="submit"><i data-lucide="save"></i>Save usuarioinfo</button>
 </form>

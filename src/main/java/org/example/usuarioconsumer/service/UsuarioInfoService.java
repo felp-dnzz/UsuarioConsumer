@@ -14,7 +14,7 @@ public class UsuarioInfoService {
     @Autowired
     private WebClient webClient;
 
-    private final String uri = "/usuarioinfo";
+    private final String uri = "/usuario/info";
 
     public UsuarioInfo findById(Integer id) {
         Mono<UsuarioInfo> monoUsuarioInfo = this.webClient.method(HttpMethod.GET).

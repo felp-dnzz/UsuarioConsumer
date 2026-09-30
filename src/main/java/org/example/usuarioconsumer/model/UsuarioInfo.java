@@ -10,14 +10,8 @@ public class UsuarioInfo {
 
     public UsuarioInfo(){}
 
-    public UsuarioInfo(Integer usuarioId, String nome, String email, LocalDate dataNascimento){
-        this.setUsuarioId(usuarioId);
-        this.setNome(nome);
-        this.setEmail(email);
-        this.setDataNascimento(dataNascimento);
-    }
 
-    public Integer getUsuarioid() {
+    public Integer getUsuarioId() {
         return usuarioId;
     }
 
